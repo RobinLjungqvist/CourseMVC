@@ -26,5 +26,13 @@ namespace DemoProject.Controllers
 
             return View();
         }
+
+        public ActionResult TheDude()
+        {
+            ViewBag.Message = @"""It really tied the room together man!"" - The Dude";
+            ViewBag.Image = "/Pictures/TheDude.PNG";
+            ViewBag.Jacc = new List<string>() { "Hallå", "Jacc!" };
+            return View();
+        }
     }
 }

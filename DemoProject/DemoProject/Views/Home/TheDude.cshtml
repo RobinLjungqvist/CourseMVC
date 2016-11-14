@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "The Dude";
+}
+
+<h2>@ViewBag.Title</h2>
+<img src="@ViewBag.Image" alt="A picture of the dude." />
+<h3>@ViewBag.Message</h3>
+@foreach (var item in ViewBag.Jacc)
+{
+    <p>@item</p>
+}
+
