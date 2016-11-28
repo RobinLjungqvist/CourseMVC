@@ -1,0 +1,29 @@
+﻿
+<div class="row">
+    <div>
+        <h1>Your Adressbook!</h1>
+        <p>
+            @{ var optionsCreate = new AjaxOptions
+                    {
+                        HttpMethod = "GET",
+                        InsertionMode = InsertionMode.Replace,
+                        UpdateTargetId = "crudfields",
+                };
+
+            }
+            @Ajax.ActionLink("Add post", "Create", "Person", optionsCreate)
+            <hr />
+        </p>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12" id="crudfields">
+
+    </div>
+</div>
+<hr />
+<div class="row" id="posts">
+
+</div>

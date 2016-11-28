@@ -1,0 +1,34 @@
+﻿@model Kunskapskontroll.Models.PersonViewModel
+
+@{
+    var createOptions = new AjaxOptions
+    {
+
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "posts",
+        OnSuccess = "OnEditSuccess"
+    };
+}
+    <div>
+        <h3>Edit</h3>
+        @using (Ajax.BeginForm("Edit", "Person", null, createOptions, new { ID = "editform" }))
+        {
+            <p>
+                @Html.LabelFor(m => m.Name)
+                @Html.EditorFor(m => m.Name)
+            </p>
+            <p>
+                @Html.LabelFor(m => m.Adress)
+                @Html.EditorFor(m => m.Adress)
+            </p>
+            <p>
+                @Html.LabelFor(m => m.PhoneNumber)
+                @Html.EditorFor(m => m.PhoneNumber)
+            </p>
+
+            <button type="submit" id="submit" name="submit">Update</button>
+
+
+        }
+    </div>

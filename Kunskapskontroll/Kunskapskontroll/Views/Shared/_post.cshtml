@@ -1,0 +1,17 @@
+﻿@model Kunskapskontroll.Models.PersonViewModel
+
+<div class="col-md-12">
+    <p>
+        @Html.LabelFor(m => m.Name)
+        @Html.DisplayFor(m => m.Name)
+
+        @Html.LabelFor(m => m.Adress)
+        @Html.DisplayFor(m => m.Adress)
+
+        @Html.LabelFor(m => m.PhoneNumber)
+        @Html.DisplayFor(m =>m.PhoneNumber)
+
+        @Ajax.ActionLink("Delete","Delete", "Person", new { id = Model.id }, new AjaxOptions { HttpMethod = "POST", Confirm = "Are you sure?", UpdateTargetId="posts"})
+        @Ajax.ActionLink("Edit", "Edit", "Person", new { id = Model.id }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "crudfields" })
+    </p>
+</div>
