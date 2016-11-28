@@ -17,14 +17,23 @@
             <p>
                 @Html.LabelFor(m => m.Name)
                 @Html.EditorFor(m => m.Name)
+                @Html.ValidationMessageFor(m => m.Name)
+
+
             </p>
             <p>
                 @Html.LabelFor(m => m.Adress)
                 @Html.EditorFor(m => m.Adress)
+                @Html.ValidationMessageFor(m => m.Adress)
+
+
             </p>
             <p>
                 @Html.LabelFor(m => m.PhoneNumber)
                 @Html.EditorFor(m => m.PhoneNumber)
+                @Html.ValidationMessageFor(m => m.PhoneNumber)
+
+
             </p>
 
             <button type="submit" id="submit" name="submit">Update</button>

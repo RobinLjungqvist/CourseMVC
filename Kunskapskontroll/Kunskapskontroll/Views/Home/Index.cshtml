@@ -4,10 +4,11 @@
         <h1>Your Adressbook!</h1>
         <p>
             @{ var optionsCreate = new AjaxOptions
-                    {
-                        HttpMethod = "GET",
-                        InsertionMode = InsertionMode.Replace,
-                        UpdateTargetId = "crudfields",
+                {
+                    HttpMethod = "GET",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "crudfields",
+                    OnSuccess = "onWindowChange"
                 };
 
             }

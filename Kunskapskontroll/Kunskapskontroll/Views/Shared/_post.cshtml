@@ -18,6 +18,6 @@
 
 
         @Html.ActionLink("Delete","Delete", "Person", new { Value = Model.id }, new { @class = "deletebtn", value = Model.id })
-        @Ajax.ActionLink("Edit", "Edit", "Person", new { id = Model.id }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "crudfields" })
+        @Ajax.ActionLink("Edit", "Edit", "Person", new { id = Model.id }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "crudfields", OnSuccess = "onWindowChange" })
     </p>
 </div>

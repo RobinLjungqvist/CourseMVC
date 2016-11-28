@@ -57,7 +57,7 @@ namespace Kunskapskontroll.Controllers
             var userID = model.id;
             var personToEdit = adressbook.Find(x => x.id == userID);
             personToEdit.Name = model.Name;
-            personToEdit.Adress = model.Name;
+            personToEdit.Adress = model.Adress;
             personToEdit.PhoneNumber = model.PhoneNumber;
 
             return PartialView("_DisplayAdressbook", adressbook);

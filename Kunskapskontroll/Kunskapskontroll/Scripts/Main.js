@@ -1,4 +1,6 @@
 ﻿/// <reference path="sweetalert.min.js" />
+/// <reference path="jquery.validate.min.js" />
+/// <reference path="jquery.validate.unobtrusive.min.js" />
 
 
 $('document').ready(function (e) {
@@ -49,3 +51,8 @@ function (isConfirm) {
     }
 });
 });
+
+function onWindowChange() {
+    $.validator.unobtrusive.parse($("#crudfields"));
+
+};
