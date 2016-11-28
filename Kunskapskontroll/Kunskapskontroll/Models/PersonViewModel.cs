@@ -13,7 +13,7 @@ namespace Kunskapskontroll.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        [DisplayName("Phone Number")]
+        [Display( Name = "Phone Number")]
         public string PhoneNumber { get; set; }
         [Required]
         public string Adress { get; set; }

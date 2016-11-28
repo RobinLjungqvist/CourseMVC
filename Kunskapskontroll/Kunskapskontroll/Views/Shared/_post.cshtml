@@ -11,7 +11,13 @@
         @Html.LabelFor(m => m.PhoneNumber)
         @Html.DisplayFor(m =>m.PhoneNumber)
 
-        @Ajax.ActionLink("Delete","Delete", "Person", new { id = Model.id }, new AjaxOptions { HttpMethod = "POST", Confirm = "Are you sure?", UpdateTargetId="posts"})
+        @Html.LabelFor(m => m.Updated)
+        @Html.DisplayFor(m => m.Updated)
+
+
+
+
+        @Html.ActionLink("Delete","Delete", "Person", new { Value = Model.id }, new { @class = "deletebtn", value = Model.id })
         @Ajax.ActionLink("Edit", "Edit", "Person", new { id = Model.id }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "crudfields" })
     </p>
 </div>
